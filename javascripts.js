@@ -7,7 +7,7 @@ function getUserInfo(callback) {
 
 
 function asyncCaller(callback){
-    // return an array objects from all arguments passed to this fct other than callback
+    // create an array comprised of all arguments passed to this fct other than the callback parameter
     var requests = Array.prototype.splice.call(arguments, 1),
         // counter var to keep track of completed async fcts
         counter = 0, 
@@ -15,13 +15,14 @@ function asyncCaller(callback){
         results = [];
 
     for (i = 0; i < requests.length; i++){
+        // pass a callback to each async function that will be called upon completion of such fct
         requests[i](function(result){
             results.push(result);
             counter++;
             if ( counter == requests.length){
                 // call callback when each async has completed
                 callback(results);
-                // console.log message of completion 
+                // console a message when complete 
                 // (which will print after the console.log internal to the callback)
                 console.log("done");
             }
