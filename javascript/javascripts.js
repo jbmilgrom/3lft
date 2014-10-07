@@ -35,7 +35,7 @@ var users = {};
 var callback = function(results) {
     for(var i = 0; i < results.length; i++) {
         var result = results[i],
-            //add ID to enable storing users with identical names 
+            //add ID to enable storing multiple users 
             user = users[i] = {}; 
         for(var key in result) {
             if(result.hasOwnProperty(key)) {
