@@ -168,4 +168,28 @@ div#formWrapper {
     div#formWrapper div#leftPosition ul#formFooter {
       list-style: none;
       width: 100%;
-      height: 50px; }
+      height: 50px;
+      padding-top: 35px; }
+      div#formWrapper div#leftPosition ul#formFooter li {
+        /*margin: $row_padding_left;*/
+        width: 48%;
+        float: left; }
+      div#formWrapper div#leftPosition ul#formFooter li#cancel {
+        margin-left: 20px; }
+      div#formWrapper div#leftPosition ul#formFooter li#submit {
+        /*margin-right: 20px;*/
+        /*				a {
+        					width: 130px;
+        					height: 30px;
+        				}*/ }
+        div#formWrapper div#leftPosition ul#formFooter li#submit input {
+          float: right;
+          background-color: #f2673a;
+          border: 2px solid #f2673a;
+          width: 130px;
+          height: 30px;
+          font-size: 13px;
+          color: white; }
+        div#formWrapper div#leftPosition ul#formFooter li#submit input:hover {
+          background-color: white;
+          color: #f2673a; }

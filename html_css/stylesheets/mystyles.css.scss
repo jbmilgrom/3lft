@@ -173,6 +173,40 @@ div#formWrapper {
 			list-style: none;
 			width: 100%;
 			height: 50px;
+			padding-top: 35px;
+
+			li {
+				/*margin: $row_padding_left;*/
+				width: 48%;
+				float: left;
+			}
+
+			li#cancel {
+				margin-left: 20px;
+			}
+
+			li#submit {
+				/*margin-right: 20px;*/
+/*				a {
+					width: 130px;
+					height: 30px;
+				}*/
+
+				input {
+					float: right;
+					background-color: $nav_background;
+					border: 2px solid $nav_background;
+					width: 130px;
+					height: 30px;
+					font-size: 13px;
+					color: white;
+				}
+
+				input:hover {
+					background-color: white;
+					color: $nav_background;
+				}
+			}
 
 		}
 	}
