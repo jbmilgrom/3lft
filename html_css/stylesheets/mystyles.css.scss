@@ -1,0 +1,73 @@
+/* html5doctor.com Reset v1.6.1 - http://cssreset.com */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{background-color:#ff9;color:#000;text-decoration:none}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}
+
+/******* NAV ********/
+/********************/
+
+$nav_font_size: 20px;
+/***** NAV ******/
+$nav_width: 200px;
+$nav_padding: 2px;
+$nav_border: 1px;
+/***** ul ******/
+$nav_ul_margin_left: 20px;
+$nav_ul_width: $nav_width - (2 * $nav_padding + $nav_ul_margin_left);
+$nav_ul_margin_top: 20px;
+$nav_ul_padding: 2px;
+/***** li ******/
+$nav_li_width: $nav_ul_width - 2 * $nav_ul_padding;
+$nav_li_height: 30px;
+$nav_li_padding: 2px;
+  
+
+nav {
+	display: block;
+	position: fixed;
+	/*z-index: 5;*/
+	height: 100%;
+	width: $nav_width;
+	padding: $nav_padding;
+	border: $nav_border solid black;
+	top: 0;
+
+	ul {
+		width: $nav_ul_width;
+		padding: $nav_ul_padding;
+		margin-top: $nav_ul_margin_top;
+		margin-left: $nav_ul_margin_left;
+
+		li {
+			width: $nav_li_width;
+			height: $nav_li_height;
+			padding: $nav_li_padding;
+			font-size:$nav_font_size;
+		}
+	}
+}
+
+/******* Form ********/
+/*********************/
+
+$lPosit_left: $nav_width + 2* ($nav_padding + $nav_border);
+$lPosit_padding: 10px;
+
+div#formWrapper {
+	position: relative;
+	height: 100%;
+	width: 100%;
+
+		div#leftPosition{
+			position: absolute;
+			left: $lPosit_left;
+			right: 0;
+			width: auto;
+			padding: $lPosit_padding;
+			list-style: none;
+
+			div#welcome {
+				width: 100%;
+				text-align: center;
+				color: red;
+			}			
+		}
+}
