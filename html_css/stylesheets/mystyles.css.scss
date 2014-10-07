@@ -48,19 +48,26 @@ nav {
 /******* Form ********/
 /*********************/
 
-$lPosit_left: $nav_width + 2* ($nav_padding + $nav_border);
+/***** positioning wrt Nav side bar ******/
+$lPosit_left: $nav_width + 2 * ($nav_padding + $nav_border);
 $lPosit_padding: 10px;
+/***** row ******/
+$row_width: 98%;
+$row_padding: 2px;
+$row_padding_left: 1%;
+$row_li_margin: 8px;
+$row_font_size: 20px;
+/***** checkboxes ******/
+$num_of_check_columns: 3;
+$check_li_width: $row_width / $num_of_check_columns;
+$check_padding_left: $row_padding_left * $num_of_check_columns;
+$check_ul_margin_left: $row_li_margin;
+$check_font_size: $row_font_size * 7/8;
 
 div#formWrapper {
 	position: relative;
 	height: 100%;
-	width: 100%;
-
-	#fieldWrapper ul {
-		list-style: none;
-		font-size: 20px;
-	}	
-		
+	width: 100%;	
 
 	div#leftPosition{
 		position: absolute;
@@ -78,15 +85,20 @@ div#formWrapper {
 			padding-top: 10px;
 		}
 
+		#fieldWrapper ul {
+			list-style: none;
+			font-size: $row_font_size;
+		}
+
 		ul.row {
-			width: 98%;
+			width: $row_width;
 			height: 100px;
 			/*border: 2px solid black;*/
-			padding: 2px;
-			padding-left: 1%;
+			padding: $row_padding;
+			padding-left: $row_padding_left;
 
 			li {
-				margin: 8px;
+				margin: $row_li_margin;
 			}
 
 			input {
@@ -107,11 +119,49 @@ div#formWrapper {
 
 		ul#checkWrapper {
 			list-style: none;
+			width: $row_width;
+			height: 150px;
+			padding: $row_padding;
+			padding-left: $row_padding_left;
+			margin-left: $check_ul_margin_left;
+			font-size: $check_font_size;
 
-			li {
-				width: 31%;
-				float: left;
+			div#categories {
+				height: 40px;
+				padding-left: 2px;
 			}
-		}		
+
+			div#positionWrapper {
+
+				width: 750px;
+
+				li {
+					width: $check_li_width;
+					height: 23px;
+					float: left;
+					padding: 2px;
+					/*padding-top: 3px;*/
+
+					span {
+						padding-left: 3px;
+						/*margin-bottom: om: -10px;*/
+					}
+
+					input {
+						margin-top: 0;
+						margin-bottom: 6px;
+						font-size: $check_font_size;
+					}
+				}
+
+			}
+		}
+
+		ul#formFooter {
+			list-style: none;
+			width: 100%;
+			height: 50px;
+
+		}
 	}
 }

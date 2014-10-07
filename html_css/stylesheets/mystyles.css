@@ -90,13 +90,13 @@ nav {
 
 /******* Form ********/
 /*********************/
+/***** positioning wrt Nav side bar ******/
+/***** row ******/
+/***** checkboxes ******/
 div#formWrapper {
   position: relative;
   height: 100%;
   width: 100%; }
-  div#formWrapper #fieldWrapper ul {
-    list-style: none;
-    font-size: 20px; }
   div#formWrapper div#leftPosition {
     position: absolute;
     left: 206px;
@@ -110,6 +110,9 @@ div#formWrapper {
       color: red;
       font-size: 50px;
       padding-top: 10px; }
+    div#formWrapper div#leftPosition #fieldWrapper ul {
+      list-style: none;
+      font-size: 20px; }
     div#formWrapper div#leftPosition ul.row {
       width: 98%;
       height: 100px;
@@ -128,7 +131,32 @@ div#formWrapper {
         div#formWrapper div#leftPosition ul.row ul.name input {
           width: 100%; }
     div#formWrapper div#leftPosition ul#checkWrapper {
-      list-style: none; }
-      div#formWrapper div#leftPosition ul#checkWrapper li {
-        width: 31%;
-        float: left; }
+      list-style: none;
+      width: 98%;
+      height: 150px;
+      padding: 2px;
+      padding-left: 1%;
+      margin-left: 8px;
+      font-size: 17.5px; }
+      div#formWrapper div#leftPosition ul#checkWrapper div#categories {
+        height: 40px;
+        padding-left: 2px; }
+      div#formWrapper div#leftPosition ul#checkWrapper div#positionWrapper {
+        width: 750px; }
+        div#formWrapper div#leftPosition ul#checkWrapper div#positionWrapper li {
+          width: 32.66667%;
+          height: 23px;
+          float: left;
+          padding: 2px;
+          /*padding-top: 3px;*/ }
+          div#formWrapper div#leftPosition ul#checkWrapper div#positionWrapper li span {
+            padding-left: 3px;
+            /*margin-bottom: om: -10px;*/ }
+          div#formWrapper div#leftPosition ul#checkWrapper div#positionWrapper li input {
+            margin-top: 0;
+            margin-bottom: 6px;
+            font-size: 17.5px; }
+    div#formWrapper div#leftPosition ul#formFooter {
+      list-style: none;
+      width: 100%;
+      height: 50px; }
