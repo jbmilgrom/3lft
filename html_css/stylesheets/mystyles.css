@@ -94,7 +94,7 @@ div#formWrapper {
   position: relative;
   height: 100%;
   width: 100%; }
-  div#formWrapper ul {
+  div#formWrapper #fieldWrapper ul {
     list-style: none;
     font-size: 20px; }
   div#formWrapper div#leftPosition {
@@ -127,3 +127,8 @@ div#formWrapper {
         float: left; }
         div#formWrapper div#leftPosition ul.row ul.name input {
           width: 100%; }
+    div#formWrapper div#leftPosition ul#checkWrapper {
+      list-style: none; }
+      div#formWrapper div#leftPosition ul#checkWrapper li {
+        width: 31%;
+        float: left; }
