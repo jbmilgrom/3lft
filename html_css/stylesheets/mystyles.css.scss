@@ -55,6 +55,11 @@ div#formWrapper {
 	position: relative;
 	height: 100%;
 	width: 100%;
+		
+		ul {
+			list-style: none;
+			font-size: 20px;
+		}
 
 		div#leftPosition{
 			position: absolute;
@@ -62,12 +67,41 @@ div#formWrapper {
 			right: 0;
 			width: auto;
 			padding: $lPosit_padding;
-			list-style: none;
 
 			div#welcome {
 				width: 100%;
+				height: 100px;
 				text-align: center;
 				color: red;
+				font-size: 50px;
+				padding-top: 10px;
+			}
+
+			ul.row {
+				width: 98%;
+				height: 100px;
+				/*border: 2px solid black;*/
+				padding: 2px;
+				padding-left: 1%;
+
+				li {
+					margin: 8px;
+				}
+
+				input {
+					height: 30px;
+					width: 100%;
+				}
+
+				ul.name {
+					display: list-item;
+					width: 50%;
+					float: left;
+
+					input {
+						width: 100%;
+					}
+				}
 			}			
 		}
 }
