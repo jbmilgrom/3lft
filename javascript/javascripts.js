@@ -1,17 +1,13 @@
 function asyncCaller(callback){
     // create an array comprised of all arguments passed to this fct other than the callback parameter
     var requests = Array.prototype.splice.call(arguments, 1),
-        // counter var to keep track of completed async fcts
+        // counter var to tally completed async fcts
         counter = 0, 
         // results array to store data of each async fct
         results = [],
 
-        s = [];
-
     for (i = 0; i < requests.length; i++){
         // pass an anonymous fct to each async fct that will be called upon completion of such async fct
-        // debugger
-
         requests[i](function(result){
             results.push(result);
             /////// TEST //////
@@ -30,7 +26,7 @@ function asyncCaller(callback){
     }
 }
 
-// async fct that calls a callback function upon completion
+// mock async fct that calls a callback function upon completion
 function getUserInfo(callback) {
     setTimeout(function() {
         var result = { fname: "Jane", lname: "Doe" };
@@ -40,7 +36,7 @@ function getUserInfo(callback) {
 
 // maintains global cache of users
 var users = {};
-// passed to asyncCaller as a callback to collect data once all async fcts have completed 
+// passed to asyncCaller to mock a callback that collects data once all async fcts have completed 
 var callback = function(results) {
     for(var i = 0; i < results.length; i++) {
         var result = results[i],
