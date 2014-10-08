@@ -4,19 +4,29 @@ function asyncCaller(callback){
         // counter var to keep track of completed async fcts
         counter = 0, 
         // results array to store data of each async fct
-        results = [];
+        results = [],
+
+        s = [];
+
+
 
     for (i = 0; i < requests.length; i++){
         // pass an anonymous fct to each async fct that will be called upon completion of such async fct
+        // debugger
+
         requests[i](function(result){
             results.push(result);
+            /////// TEST //////
+            assert(results[counter] == result, "async function number: " + (counter+1) + "; data: " + results[counter]["lname"] + ", " + results[counter]["fname"])
+            /////// END  //////
             counter++;
             if ( counter == requests.length){
-                // call callback when each async has completed
+                /////// TEST //////
+                assert(true, "Number of async functions: " + requests.length);
+                assert(true, "Number of results: " + results.length);
+                assert(requests.length == results.length, "Callback can now be called on the results array");
+                /////// END  //////
                 callback(results);
-                // console a message when complete 
-                // (which will print after the console.log internal to the callback)
-                console.log("done");
             }
         })
     }
@@ -44,8 +54,9 @@ var callback = function(results) {
             }
         }
     }
+    /////// TEST //////
+    assert(true, "See Console for user object");
+    /////// END  //////
     console.log(users);
 }
-
-asyncCaller(callback, getUserInfo, getUserInfo, getUserInfo, getUserInfo, getUserInfo);
 
