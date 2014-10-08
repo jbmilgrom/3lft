@@ -1,11 +1,3 @@
-function getUserInfo(callback) {
-    setTimeout(function() {
-        var result = { fname: "Jane", lname: "Doe" };
-        callback(result);
-    }, Math.random() * 1000);
-}
-
-
 function asyncCaller(callback){
     // create an array comprised of all arguments passed to this fct other than the callback parameter
     var requests = Array.prototype.splice.call(arguments, 1),
@@ -28,6 +20,13 @@ function asyncCaller(callback){
             }
         })
     }
+}
+
+function getUserInfo(callback) {
+    setTimeout(function() {
+        var result = { fname: "Jane", lname: "Doe" };
+        callback(result);
+    }, Math.random() * 1000);
 }
 
 // maintains global cache of users

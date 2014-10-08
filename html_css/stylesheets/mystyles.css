@@ -68,9 +68,9 @@ input, select {
 
 /******* NAV ********/
 /********************/
-/***** NAV ******/
-/***** ul ******/
-/***** li ******/
+/***** NAV Wrapper ******/
+/***** Item Wrapper ******/
+/***** Item ******/
 body {
   font-family: 'open_sansregular'; }
 
@@ -96,10 +96,10 @@ nav {
 
 /******* Form ********/
 /*********************/
-/***** positioning wrt Nav side bar ******/
-/***** row ******/
-/***** checkboxes ******/
-/*pixel width because checkboxes can't be fluid*/
+/***** Positioning with respect to Nav side bar ******/
+/***** Each Row ******/
+/***** Checkboxes Section ******/
+/*** Pixel width because checkboxes can't be fluid ***/
 div#formWrapper {
   position: relative;
   height: 100%;
@@ -153,13 +153,13 @@ div#formWrapper {
       padding-left: 1%;
       margin-left: 8px;
       font-size: 17.5px;
-      /*since checkboxes are not fluid, @media is necessary*/ }
+      /*** Since checkboxes are not fluid, @media is necessary ***/ }
       div#formWrapper div#leftPosition ul#checkWrapper div#categories {
         height: 40px;
         padding-left: 2px;
         font-size: 20px; }
       div#formWrapper div#leftPosition ul#checkWrapper div#positionWrapper {
-        /*the only width that is in pixels*/
+        /*** the only width that is in pixels ***/
         width: 750px;
         height: 100%; }
         div#formWrapper div#leftPosition ul#checkWrapper div#positionWrapper li {

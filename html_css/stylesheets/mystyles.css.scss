@@ -4,6 +4,8 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 @import './fonts/opensans_light_macroman.css';
 @import './fonts/opensans_regular_macroman.css';
 @import './fonts/opensans_semibold_macroman.css';
+
+
 /******* NAV ********/
 /********************/
 
@@ -11,16 +13,19 @@ $nav_background: #f2673a;
 $nav_font_size: 20px;
 $light_text_color: #8c8c8c;
 $dark_text_color: #565656;
-/***** NAV ******/
+
+/***** NAV Wrapper ******/
 $nav_width: 200px;
 $nav_padding: 2px;
 $nav_border: 5px;
-/***** ul ******/
+
+/***** Item Wrapper ******/
 $nav_ul_margin_left: 20px;
 $nav_ul_width: $nav_width - (2 * $nav_padding + $nav_ul_margin_left);
 $nav_ul_margin_top: 20px;
 $nav_ul_padding: 2px;
-/***** li ******/
+
+/***** Item ******/
 $nav_li_width: $nav_ul_width - 2 * $nav_ul_padding;
 $nav_li_height: 30px;
 $nav_li_padding: 2px;
@@ -57,22 +62,25 @@ nav {
 /******* Form ********/
 /*********************/
 
-/***** positioning wrt Nav side bar ******/
+/***** Positioning with respect to Nav side bar ******/
 $lPosit_left: $nav_width + 2 * $nav_padding;
 $lPosit_padding: 10px;
-/***** row ******/
+
+/***** Each Row ******/
 $row_width: 98%;
 $row_padding: 2px;
 $row_padding_left: 1%;
 $row_li_margin: 8px;
 $row_font_size: 20px;
-/***** checkboxes ******/
+
+/***** Checkboxes Section ******/
 $num_of_check_columns: 3;
 $check_li_width: $row_width / $num_of_check_columns;
 $check_padding_left: $row_padding_left * $num_of_check_columns;
 $check_ul_margin_left: $row_li_margin;
 $check_font_size: $row_font_size * 7/8;
-/*pixel width because checkboxes can't be fluid*/
+
+/*** Pixel width because checkboxes can't be fluid ***/
 $positionWrapper_width: 750px;
 
 div#formWrapper {
@@ -160,7 +168,7 @@ div#formWrapper {
 
 			div#positionWrapper {
 				
-				/*the only width that is in pixels*/
+				/*** the only width that is in pixels ***/
 				width: $positionWrapper_width;
 				height: 100%;
 
@@ -182,7 +190,7 @@ div#formWrapper {
 				}
 			}
 
-			/*since checkboxes are not fluid, @media is necessary*/
+			/*** Since checkboxes are not fluid, @media is necessary ***/
 			@media (max-width: 1000px) {
 
 				div#positionWrapper {
