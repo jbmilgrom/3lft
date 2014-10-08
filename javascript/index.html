@@ -3,15 +3,18 @@
     <title>Test Suite</title>
     <script type="text/javascript" src='./test.js'></script>
     <script type="text/javascript" src='./javascripts.js'></script>
-    <script>
-      
+    <script>  
       window.onload = function(){
-        assert(true, "test suite is running")
+        assert(true, "Passing tests are green");
+        assert(false, "Failing tests are red");
         // call asyncCaller() with 5 async functions
         asyncCaller(callback, getUserInfo, getUserInfo, getUserInfo, getUserInfo, getUserInfo);
       }
-
     </script>
+    <style>
+      #results li.pass {color: green;}
+      #results li.fail {color: red;}
+    </style>
   </head>
   <body>
     <h1>Results</h1>

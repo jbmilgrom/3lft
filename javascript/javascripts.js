@@ -8,8 +8,6 @@ function asyncCaller(callback){
 
         s = [];
 
-
-
     for (i = 0; i < requests.length; i++){
         // pass an anonymous fct to each async fct that will be called upon completion of such async fct
         // debugger
@@ -22,7 +20,7 @@ function asyncCaller(callback){
             counter++;
             if ( counter == requests.length){
                 /////// TEST //////
-                assert(true, "Number of async functions: " + requests.length);
+                assert(requests.length == counter, "Number of async functions: " + counter);
                 assert(true, "Number of results: " + results.length);
                 assert(requests.length == results.length, "Callback can now be called on the results array");
                 /////// END  //////
