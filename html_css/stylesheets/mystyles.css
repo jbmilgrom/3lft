@@ -80,7 +80,6 @@ nav {
   height: 100%;
   width: 200px;
   padding: 2px;
-  /*border-right: $nav_border solid $dark_text_color;*/
   top: 0;
   background-color: #f2673a;
   color: white; }
@@ -100,6 +99,7 @@ nav {
 /***** positioning wrt Nav side bar ******/
 /***** row ******/
 /***** checkboxes ******/
+/*pixel width because checkboxes can't be fluid*/
 div#formWrapper {
   position: relative;
   height: 100%;
@@ -131,14 +131,14 @@ div#formWrapper {
     div#formWrapper div#leftPosition ul.row {
       width: 98%;
       height: 100px;
-      /*border: 2px solid black;*/
       padding: 2px;
       padding-left: 1%; }
       div#formWrapper div#leftPosition ul.row li {
         margin: 8px; }
       div#formWrapper div#leftPosition ul.row input {
         height: 30px;
-        width: 100%; }
+        width: 100%;
+        font-size: 16.66667px; }
       div#formWrapper div#leftPosition ul.row ul.name {
         display: list-item;
         width: 50%;
@@ -152,12 +152,14 @@ div#formWrapper {
       padding: 2px;
       padding-left: 1%;
       margin-left: 8px;
-      font-size: 17.5px; }
+      font-size: 17.5px;
+      /*since checkboxes are not fluid, @media is necessary*/ }
       div#formWrapper div#leftPosition ul#checkWrapper div#categories {
         height: 40px;
         padding-left: 2px;
         font-size: 20px; }
       div#formWrapper div#leftPosition ul#checkWrapper div#positionWrapper {
+        /*the only width that is in pixels*/
         width: 750px;
         height: 100%; }
         div#formWrapper div#leftPosition ul#checkWrapper div#positionWrapper li {
@@ -200,8 +202,7 @@ div#formWrapper {
         width: 140px;
         height: 40px;
         font-size: 14px;
-        color: white;
-        margin-right: 1%; }
+        color: white; }
       div#formWrapper div#leftPosition ul#formFooter li#submit input:hover {
         border: 2px solid #f2673a;
         background-color: #f2673a;
