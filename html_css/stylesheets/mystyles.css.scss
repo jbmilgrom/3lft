@@ -14,7 +14,7 @@ $dark_text_color: #565656;
 /***** NAV ******/
 $nav_width: 200px;
 $nav_padding: 2px;
-$nav_border: 2px;
+$nav_border: 5px;
 /***** ul ******/
 $nav_ul_margin_left: 20px;
 $nav_ul_width: $nav_width - (2 * $nav_padding + $nav_ul_margin_left);
@@ -32,11 +32,10 @@ body {
 nav {
 	display: block;
 	position: fixed;
-	/*z-index: 5;*/
 	height: 100%;
 	width: $nav_width;
 	padding: $nav_padding;
-	border-right: $nav_border solid $light_text_color;
+	/*border-right: $nav_border solid $dark_text_color;*/
 	top: 0;
 	background-color: $nav_background;
 	color: white;
@@ -92,9 +91,23 @@ div#formWrapper {
 			width: 100%;
 			height: 100px;
 			text-align: center;
-			color: $nav_background;
 			font-size: 50px;
 			padding-top: 10px;
+			color: $light_text_color;
+			font-family: 'open_sanssemibold';
+	
+			span#wt {
+				text-rendering: optimallegibility;
+			}
+
+			strong {
+				color: $nav_background; 
+			}
+
+			span#triple {
+				color: $dark_text_color;
+			}
+
 		}
 
 		#fieldWrapper ul {
@@ -141,6 +154,7 @@ div#formWrapper {
 			div#categories {
 				height: 40px;
 				padding-left: 2px;
+				font-size: $row_font_size;
 			}
 
 			div#positionWrapper {
@@ -183,6 +197,14 @@ div#formWrapper {
 
 			li#cancel {
 				margin-left: 20px;
+
+				a:link {
+					color: $dark_text_color;
+				}
+
+				a:visited {
+					color: $dark_text_color;
+				}
 			}
 
 			li#submit {
@@ -194,17 +216,20 @@ div#formWrapper {
 
 				input {
 					float: right;
-					background-color: $nav_background;
-					border: 2px solid $nav_background;
-					width: 130px;
-					height: 30px;
-					font-size: 13px;
+					background-color: $dark_text_color;
+					border: 2px solid $dark_text_color;
+					width: 140px;
+					height: 40px;
+					font-size: 14px;
 					color: white;
+					/*text-rendering: optimallegibility;*/
+
 				}
 
 				input:hover {
-					background-color: white;
-					color: $nav_background;
+					border: 2px solid $nav_background;
+					background-color: $nav_background;
+					color: white;
 				}
 			}
 

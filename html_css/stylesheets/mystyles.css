@@ -77,11 +77,10 @@ body {
 nav {
   display: block;
   position: fixed;
-  /*z-index: 5;*/
   height: 100%;
   width: 200px;
   padding: 2px;
-  border-right: 2px solid #8c8c8c;
+  /*border-right: $nav_border solid $dark_text_color;*/
   top: 0;
   background-color: #f2673a;
   color: white; }
@@ -108,7 +107,7 @@ div#formWrapper {
   color: #565656; }
   div#formWrapper div#leftPosition {
     position: absolute;
-    left: 208px;
+    left: 214px;
     right: 0;
     width: auto;
     padding: 10px; }
@@ -116,9 +115,16 @@ div#formWrapper {
       width: 100%;
       height: 100px;
       text-align: center;
-      color: #f2673a;
       font-size: 50px;
-      padding-top: 10px; }
+      padding-top: 10px;
+      color: #8c8c8c;
+      font-family: 'open_sanssemibold'; }
+      div#formWrapper div#leftPosition div#welcome span#wt {
+        text-rendering: optimallegibility; }
+      div#formWrapper div#leftPosition div#welcome strong {
+        color: #f2673a; }
+      div#formWrapper div#leftPosition div#welcome span#triple {
+        color: #565656; }
     div#formWrapper div#leftPosition #fieldWrapper ul {
       list-style: none;
       font-size: 20px; }
@@ -149,7 +155,8 @@ div#formWrapper {
       font-size: 17.5px; }
       div#formWrapper div#leftPosition ul#checkWrapper div#categories {
         height: 40px;
-        padding-left: 2px; }
+        padding-left: 2px;
+        font-size: 20px; }
       div#formWrapper div#leftPosition ul#checkWrapper div#positionWrapper {
         width: 750px; }
         div#formWrapper div#leftPosition ul#checkWrapper div#positionWrapper li {
@@ -176,6 +183,10 @@ div#formWrapper {
         float: left; }
       div#formWrapper div#leftPosition ul#formFooter li#cancel {
         margin-left: 20px; }
+        div#formWrapper div#leftPosition ul#formFooter li#cancel a:link {
+          color: #565656; }
+        div#formWrapper div#leftPosition ul#formFooter li#cancel a:visited {
+          color: #565656; }
       div#formWrapper div#leftPosition ul#formFooter li#submit {
         /*margin-right: 20px;*/
         /*				a {
@@ -184,12 +195,14 @@ div#formWrapper {
         				}*/ }
         div#formWrapper div#leftPosition ul#formFooter li#submit input {
           float: right;
-          background-color: #f2673a;
-          border: 2px solid #f2673a;
-          width: 130px;
-          height: 30px;
-          font-size: 13px;
-          color: white; }
+          background-color: #565656;
+          border: 2px solid #565656;
+          width: 140px;
+          height: 40px;
+          font-size: 14px;
+          color: white;
+          /*text-rendering: optimallegibility;*/ }
         div#formWrapper div#leftPosition ul#formFooter li#submit input:hover {
-          background-color: white;
-          color: #f2673a; }
+          border: 2px solid #f2673a;
+          background-color: #f2673a;
+          color: white; }
