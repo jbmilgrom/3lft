@@ -1,5 +1,7 @@
 # Javascript Challenge
-All code relating to the Javascript challenge can be found in the 'javascript' folder. 
-        
-        // 'results' is accissble inside each async function (despite being called asyncronously)
-        // because of the closure created (below) in the asyncCaller()'s signature
+All code relating to the Javascript challenge can be found in the 'javascript' folder. Please feel free to fork and run './javascript/index.html'. Doing so will trigger a call to asyncCaller(), the custom function for calling a single callback on data returned from a variable amount of asyncronous functions only upon the calling and completion of such asynchronous functions. Loading './javascript/index.html' will also trigger the testing suite: function assert(value, desc). This function can be found in './javascript/test.js'. 
+
+##### A little explanation of how asyncCaller(callback, async, async, async, etc.) works...
+
+An empty array literal `var results` is initially created upon calling `asyncCaller()`. An anonymous function is then passed to each async function passed as a parameter that includes a reference back to `results`, which is then accessible inside each async function despite being called asyncronously because of the closure formed by the signature of `asyncCaller()`. This allows `results.push()` inside of each async function to update `results` with data unique to each async function upon the calling thereof.  The number of values (i.e. `results.length`) stored in `results` is then compared with the number of async functions initially passed to asyncCaller() (i.e. `Array.prototype.splice.call(arguments, 1).length` which is equivelant to `requests.length`), assuming the callback was passed as the first parameter to asyncCaller(). When `results.length == requests.length`, the callback may then be passed the data now stored in `results`.
+
