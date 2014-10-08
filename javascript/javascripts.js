@@ -32,6 +32,7 @@ function getUserInfo(callback) {
 
 // maintains global cache of users
 var users = {};
+// passed to asyncCaller as a callback to collect data once all async fcts have completed 
 var callback = function(results) {
     for(var i = 0; i < results.length; i++) {
         var result = results[i],
