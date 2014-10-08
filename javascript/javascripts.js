@@ -7,7 +7,7 @@ function asyncCaller(callback){
         results = [];
 
     for (i = 0; i < requests.length; i++){
-        // pass a callback to each async function that will be called upon completion of such fct
+        // pass an anonymous fct to each async fct that will be called upon completion of such async fct
         requests[i](function(result){
             results.push(result);
             counter++;
@@ -22,6 +22,7 @@ function asyncCaller(callback){
     }
 }
 
+// async fct that calls a callback function upon completion
 function getUserInfo(callback) {
     setTimeout(function() {
         var result = { fname: "Jane", lname: "Doe" };
