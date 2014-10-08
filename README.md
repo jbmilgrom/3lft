@@ -1,7 +1,7 @@
 # Javascript Challenge
 All code relating to the Javascript challenge can be found in the ['javascript'](https://github.com/jbmilgrom/3lft/blob/master/javascript) folder. Please feel free to fork and run ['./javascript/index.html'](https://github.com/jbmilgrom/3lft/blob/master/javascript/index.html) in your browser. Doing so will trigger a call to `asyncCaller()`, the custom function for calling a single callback on data returned from a variable amount of asynchronous functions. Running ['./javascript/index.html'](https://github.com/jbmilgrom/3lft/blob/master/javascript/index.html) in your browser will also trigger [the testing suite](https://github.com/jbmilgrom/3lft/blob/master/javascript/test.js): `function assert(value, desc)`. Below is a snapshot of the page that results. In this case, 5 of the mock asynchronous functions and the mock callback were passed to `asyncCaller` i.e. `asyncCaller(callback, getUserInfo, getUserInfo, getUserInfo, getUserInfo, getUserInfo)`:
 
-![image](https://s3-us-west-2.amazonaws.com/jbmpics/triplelift/Screen+Shot+2014-10-08+at+1.16.00+PM.png)
+![image](https://s3-us-west-2.amazonaws.com/jbmpics/triplelift/Screen+Shot+2014-10-08+at+4.05.20+PM.png)
 
 ##### A little explanation of how asyncCaller(callback, async, async, async, etc.) works...
 
