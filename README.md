@@ -1,5 +1,7 @@
 # Javascript Challenge
-All code relating to the Javascript challenge can be found in the 'javascript' folder. Please feel free to fork and run `./javascript/index.html`. Doing so will trigger a call to `asyncCaller()`, the custom function for calling a single callback on data returned from a variable amount of asyncronous functions. Loading `./javascript/index.html` will also trigger the testing suite: `function assert(value, desc)`. This function's signature can be found in `./javascript/test.js`. 
+All code relating to the Javascript challenge can be found in the 'javascript' folder. Please feel free to fork and run `./javascript/index.html`. Doing so will trigger a call to `asyncCaller()`, the custom function for calling a single callback on data returned from a variable amount of asyncronous functions. Loading `./javascript/index.html` will also trigger the testing suite: `function assert(value, desc)`. This function's signature can be found in `./javascript/test.js`. Here's a snapshot of the test results:
+
+![image](https://s3-us-west-2.amazonaws.com/jbmpics/triplelift/Screen+Shot+2014-10-08+at+1.16.00+PM.png)
 
 ##### A little explanation of how asyncCaller(callback, async, async, async, etc.) works...
 
